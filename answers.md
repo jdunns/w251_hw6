@@ -38,5 +38,5 @@
 ### Q3.2 - What does this pipeline do?
 > This pipeline gets the video feed from the monitor, adds some old-timey visual artifacts, and displays the resultant video to the display. 
 
-
-
+### Build Python using OpenCV to capture Gstreamer Video
+See `pipeline.py`. Although this task confused me a little as the example code seems to already meet all the requirements. 
