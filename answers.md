@@ -46,7 +46,7 @@ See `pipeline.py`. Although this task confused me a little as the example code s
 
 # Part 2
 ### Base Model Used
-> Resnet-18
+> Resnet-18 - I have added the trained model to my repository here.
 
 ### Description of the Dataset
 > I used the Kaggle dataset [Fruits360](https://www.kaggle.com/datasets/moltean/fruits) which has 90,380 images of 131 fruits and vegetables. Frankly, I am not very impressed with this dataset. Although there are lots of pictures, the images for each fruit seem to be the exact same specimen pictured multiple times from different angles under the exact same conditions. The backgrounds are also cropped and replaced with a white border. I don't see this model generalizing well to real-time inference because the data is so sterile and unvarying. Even the test data seems to be the exact same object specimen just pictured from different angles under exact conditions. 
@@ -55,6 +55,7 @@ See `pipeline.py`. Although this task confused me a little as the example code s
 > I used the default parameters for training the model via the `jetson-inference` docker image's python classification code. This means I trained my model for about 5 hours and it took only 3 epochs to reach a validation accuracy of 87.5%. I stopped at 3 epochs after I saw the model did not improve accuracy much from the previous epoch. The batch size was the default value of 8 and the default workers was 2. 
 
 ### Native Pytorch baseline
-
+> The native pyTorch baseline was able to do about 1 image per 0.0663 seconds. 
 
 ### TensorRT performance numbers
+> The tensorRT inference was able to do about 1 image per 0.0176 seconds. That is a remarkable speedup!!!
